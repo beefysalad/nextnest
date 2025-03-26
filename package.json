@@ -1,0 +1,11 @@
+{
+  "name": "fullstacktemplate",
+  "version": "1.0.0",
+  "description": "fullstack template for next and nest",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "John Patrick Ryan D. Mandal",
+  "license": "ISC"
+}
