@@ -1,0 +1,20 @@
+# Author: John Patrick Ryan Mandal
+name: Deploy NestJS (Server) to Vercel
+
+on:
+  workflow_dispatch: # Manual trigger only
+
+jobs:
+  deploy-server:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install Vercel CLI
+        run: npm install -g vercel
+
+      - name: Deploy Server to Vercel
+        run: vercel --prod --yes --token=${{ secrets.VERCEL_TOKEN }}
+        working-directory: server
