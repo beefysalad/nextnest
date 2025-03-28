@@ -4,8 +4,20 @@
   "description": "fullstack template for next and nest",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:backend": "cd server && npm run start",
+    "start:frontend": "cd client && npm run start",
+    "build:frontend": "cd client && npm run build",
+    "build:backend": "cd server && npm run build",
+    "start:dev:backend": "cd server && npm rum start:dev",
+    "start:dev:frontend": "cd client && npm run dev",
+    "start": "concurrently --names \"BACKEND,FRONTEND\" --kill-others-on-fail \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:dev": "concurrently --names \"BACKEND,FRONTEND\" --kill-others-on-fail \"npm run start:dev:backend\" \"npm run start:dev:frontend\"",
+    "install": "concurrently  --names \"BACKEND,FRONTEND\" \"cd server && npm install\" \"cd client && npm install\""
   },
   "author": "John Patrick Ryan D. Mandal",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^9.1.2"
+  }
 }
