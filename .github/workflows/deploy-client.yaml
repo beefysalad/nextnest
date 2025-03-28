@@ -16,7 +16,7 @@ jobs:
         run: npm install -g vercel
 
       - name: Link Project to Vercel (if not already linked)
-        run: vercel link --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel link --yes --token=${{ secrets.VERCEL_TOKEN }}
         working-directory: client
 
       - name: Deploy Client to Vercel
