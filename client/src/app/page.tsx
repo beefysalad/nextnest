@@ -50,7 +50,7 @@ export default async function Home() {
             target='_blank'
             rel='noopener noreferrer'
           >
-            UPDATED FRONTEND TEST
+            TANGNA
           </a>
         </div>
       </main>
