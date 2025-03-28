@@ -17,7 +17,7 @@ jobs:
 
       - name: Link Project to Vercel (if not already linked)
         run: vercel link --yes --token=${{ secrets.VERCEL_TOKEN }}
-        working-directory: client
+        working-directory: fullstack-template-frontend
 
       - name: Deploy Client to Vercel
         run: vercel --prod --yes --token=${{ secrets.VERCEL_TOKEN }}
