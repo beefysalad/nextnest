@@ -50,7 +50,7 @@ export default async function Home() {
             target='_blank'
             rel='noopener noreferrer'
           >
-            Read our docs
+            UPDATED FRONTEND TEST
           </a>
         </div>
       </main>
